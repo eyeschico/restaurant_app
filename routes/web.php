@@ -42,6 +42,12 @@ Route::get("/viewchef", [AdminController::class,"viewchef"]);
 
 Route::post("/uploadchef", [AdminController::class,"uploadchef"]);
 
+Route::get("/updatechef/{id}", [AdminController::class,"updatechef"]);
+
+Route::post("/updatefoodchef/{id}", [AdminController::class,"updatefoodchef"]);
+
+Route::get("/deletechef/{id}", [AdminController::class,"deletechef"]);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
