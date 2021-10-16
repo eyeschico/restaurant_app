@@ -1,6 +1,6 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-    <h3>Admin Panel</h3>
+    <h3><a href="{{url('/redirects')}}">Admin Panel</a></h3>
   </div>
   <ul class="nav">
     <li class="nav-item nav-category">
@@ -23,7 +23,7 @@
       </a>
     </li>
     <li class="nav-item menu-items">
-      <a class="nav-link" href="pages/tables/basic-table.html">
+      <a class="nav-link" href="{{url('/viewchef')}}">
         <span class="menu-icon">
           <i class="mdi mdi-table-large"></i>
         </span>
