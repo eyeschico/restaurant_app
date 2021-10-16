@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Food;
 use App\Models\Chef;
+use App\Models\Cart;
 
 class HomeController extends Controller
 {
@@ -19,21 +20,33 @@ class HomeController extends Controller
       $data=food::all();
       $data2=chef::all();
       $usertype= Auth::user()->usertype;
+
       if($usertype=='1'){
         return view('admin.adminhome');
       }
       else{
-        return view('home', compact("data", "data2"));
+        $user_id=Auth::id();
+        //combien de fois l'utilisateur a ajouter un produit au panier
+        $count= cart::where('user_id', $user_id)->count(); 
+        return view('home', compact('data', 'data2', 'count'));
       }
   }
 
-  public function addcart(){
+  public function addcart(Request $request, $id){
 
     //Si l'user n'est pas connecté alors redirection vers login
     if(Auth::id()){
-
+      // identification du panier
       $user_id=Auth::id();
-      dd($user_id);
+      $food_id= $id;
+      $quantity=$request->quantity;
+
+      //Ajoute le produit au panier de l'user
+      $cart= new cart;
+      $cart->user_id=$user_id;
+      $cart->food_id=$food_id;
+      $cart->quantity=$quantity;
+      $cart->save();
 
       return redirect()->back();
     }
