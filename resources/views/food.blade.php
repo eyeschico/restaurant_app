@@ -15,20 +15,26 @@
       <div class="owl-menu-item owl-carousel">
 
         @foreach($data as $data)
+          <form action="{{url('/addcart')}}" method="post">
+            @csrf
 
-          <div class="item">
-            <div style="background-image: url('/foodimage/{{$data->image}}');" class='card'>
-              <div class="price"><h6>{{$data->price}}€</h6></div>
-              <div class='info'>
-                <h1 class='title'>{{$data->title}}</h1>
-                <p class='description'>{{$data->description}}</p>
-                <div class="main-text-button">
-                  <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
+            <div class="item">
+              <div style="background-image: url('/foodimage/{{$data->image}}');" class='card'>
+                <div class="price"><h6>{{$data->price}}€</h6></div>
+                <div class='info'>
+                  <h1 class='title'>{{$data->title}}</h1>
+                  <p class='description'>{{$data->description}}</p>
+                  <div class="main-text-button">
+                    <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
+              <input type="number" name="quality" min="0" style="width: 80px;">
+              <input type="submit" value="Add cart">
+
+            </div>
+          </form>
         @endforeach
 
       </div>

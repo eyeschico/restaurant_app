@@ -26,4 +26,19 @@ class HomeController extends Controller
         return view('home', compact("data", "data2"));
       }
   }
+
+  public function addcart(){
+
+    //Si l'user n'est pas connecté alors redirection vers login
+    if(Auth::id()){
+
+      $user_id=Auth::id();
+      dd($user_id);
+
+      return redirect()->back();
+    }
+    else{
+      return redirect('/login');
+    }
+  }
 }
