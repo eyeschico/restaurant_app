@@ -11,31 +11,35 @@ use App\Models\Order;
 
 class HomeController extends Controller
 {
-    public function index(){
-      //Si l'user se connecte alors redirection sinon vers home
-      if(Auth::id()){
-        return redirect('redirects');
-      }
-      else
-        $data=food::all();
-        $data2=chef::all();
-        return view("home", compact("data", "data2"));
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
-
-    public function redirects(){
+  public function index(){
+    //Si l'user se connecte alors redirection sinon vers home
+    if(Auth::id()){
+      return redirect('redirects');
+    }
+    else
       $data=food::all();
       $data2=chef::all();
-      $usertype= Auth::user()->usertype;
+      return view("home", compact("data", "data2"));
+  }
 
-      if($usertype=='1'){
-        return view('admin.adminhome');
-      }
-      else{
-        $user_id=Auth::id();
-        //combien de fois l'utilisateur a ajouter un produit au panier
-        $count= cart::where('user_id', $user_id)->count(); 
-        return view('home', compact('data', 'data2', 'count'));
-      }
+  public function redirects(){
+    $data=food::all();
+    $data2=chef::all();
+    $usertype= Auth::user()->usertype;
+
+    if($usertype=='1'){
+      return view('admin.adminhome');
+    }
+    else{
+      $user_id=Auth::id();
+      //combien de fois l'utilisateur a ajouter un produit au panier
+      $count= cart::where('user_id', $user_id)->count(); 
+      return view('home', compact('data', 'data2', 'count'));
+    }
   }
 
   public function addcart(Request $request, $id){

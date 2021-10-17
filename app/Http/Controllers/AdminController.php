@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Food;
 use App\Models\Reservation;
@@ -12,6 +13,11 @@ use App\Models\Order;
 
 class AdminController extends Controller
 {
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
+  
   public function user(){
     $data=user::all();
     return view("admin.users", compact("data"));
@@ -85,8 +91,14 @@ class AdminController extends Controller
   }
 
   public function viewreservation(){
-    $data=reservation::all();
-    return view("admin.adminreservation", compact("data"));
+    if(Auth::id()){
+      $data=reservation::all();
+      return view("admin.adminreservation", compact("data"));
+    }
+    else{
+      return redirect('/login');
+    }
+
   }
 
   public function viewchef(){
