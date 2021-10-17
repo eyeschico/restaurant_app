@@ -31,37 +31,44 @@ Route::post("/orderconfirm", [HomeController::class,"orderconfirm"]);
 
 /*ADMIN CONTROLLERS*/
 
-Route::get("/users", [AdminController::class,"user"]);
+Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
+{
 
-Route::get("/deletemenu/{id}", [AdminController::class,"deletemenu"]);
+  Route::get("/users", [AdminController::class,"user"]);
 
-Route::get("/foodmenu", [AdminController::class,"foodmenu"]);
+  Route::get("/deletemenu/{id}", [AdminController::class,"deletemenu"]);
 
-Route::post("/uploadfood", [AdminController::class,"upload"]);
+  Route::get("/foodmenu", [AdminController::class,"foodmenu"]);
 
-Route::get("/deleteuser/{id}", [AdminController::class,"deleteuser"]);
+  Route::post("/uploadfood", [AdminController::class,"upload"]);
 
-Route::get("/updateview/{id}", [AdminController::class,"updateview"]);
+  Route::get("/deleteuser/{id}", [AdminController::class,"deleteuser"]);
 
-Route::post("/update/{id}", [AdminController::class,"update"]);
+  Route::get("/updateview/{id}", [AdminController::class,"updateview"]);
 
-Route::post("/reservation", [AdminController::class,"reservation"]);
+  Route::post("/update/{id}", [AdminController::class,"update"]);
 
-Route::get("/viewreservation", [AdminController::class,"viewreservation"]);
+  Route::post("/reservation", [AdminController::class,"reservation"]);
 
-Route::get("/viewchef", [AdminController::class,"viewchef"]);
+  Route::get("/viewreservation", [AdminController::class,"viewreservation"]);
 
-Route::post("/uploadchef", [AdminController::class,"uploadchef"]);
+  Route::get("/viewchef", [AdminController::class,"viewchef"]);
 
-Route::get("/updatechef/{id}", [AdminController::class,"updatechef"]);
+  Route::post("/uploadchef", [AdminController::class,"uploadchef"]);
 
-Route::post("/updatefoodchef/{id}", [AdminController::class,"updatefoodchef"]);
+  Route::get("/updatechef/{id}", [AdminController::class,"updatechef"]);
 
-Route::get("/deletechef/{id}", [AdminController::class,"deletechef"]);
+  Route::post("/updatefoodchef/{id}", [AdminController::class,"updatefoodchef"]);
 
-Route::get("/orders", [AdminController::class,"orders"]);
+  Route::get("/deletechef/{id}", [AdminController::class,"deletechef"]);
 
-Route::get("/search", [AdminController::class,"search"]);
+  Route::get("/orders", [AdminController::class,"orders"]);
+
+  Route::get("/search", [AdminController::class,"search"]);
+
+});
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

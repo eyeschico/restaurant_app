@@ -11,10 +11,11 @@ use App\Models\Order;
 
 class HomeController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
+  
   public function index(){
     //Si l'user se connecte alors redirection sinon vers home
     if(Auth::id()){
