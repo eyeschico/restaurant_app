@@ -123,52 +123,49 @@
           <th style="padding: 30px;">Quantity</th>
           <th style="padding: 30px;">Action</th>
         </tr>
+      <form action="{{url('orderconfirm')}}" method="post">
+        @csrf
+          @foreach($data as $data)
+          <tr align="center">
+            <td><input type="text" name="foodname[]" value="{{$data->title}}" hidden>{{$data->title}}</td>
+            <td><input type="text" name="price[]" value="{{$data->price}}" hidden>{{$data->price}}€</td>
+            <td><input type="text" name="quantity[]" value="{{$data->quantity}}" hidden>{{$data->quantity}}</td>
+          </tr>
+          @endforeach
 
-        @foreach($data as $data)
-        <tr align="center">
-          <td>{{$data->title}}</td>
-          <td>{{$data->price}}€</td>
-          <td>{{$data->quantity}}</td>
-        </tr>
-        @endforeach
+          @foreach($data2 as $data2)
+          <tr style="position: relative; top: -60px; right: -360px;">
+            <td><a href="{{url('/remove', $data2->id)}}" class="btn btn-danger">Remove</a></td>
+          </tr>
 
-        @foreach($data2 as $data2)
-        <tr style="position: relative; top: -60px; right: -360px;">
-          <td><a href="{{url('/remove', $data2->id)}}" class="btn btn-danger">Remove</a></td>
-        </tr>
+          @endforeach
 
-        @endforeach
+        </table>
 
-      </table>
-
-      <div align="center" style="padding: 10px;">
-        <button class="btn btn-primary" id="order">Order Now</button>
-      </div>
-
-      <div id="appear" align="center" style="padding: 10px; display: none;">
-        <div style="padding: 10px;">
-          <label for="">Name</label>
-          <input type="text" name="name" placeholder="Name">
-        </div>
-        <div style="padding: 10px;">
-          <label for="">Phone</label>
-          <input type="number" name="phone" placeholder="phone">
-        </div>
-        <div style="padding: 10px;">
-          <label for="">Adress</label>
-          <input type="text" name="adress" placeholder="Adress">
-        </div>
-        <div style="padding: 10px;">
-
-          <input class="btn btn-success" type="submit" value="Order Confirm" >
-          <button id="close" class="btn btn-danger">Close</button>
+        <div align="center" style="padding: 10px;">
+          <button class="btn btn-primary" type="button" id="order">Order Now</button>
         </div>
 
+        <div id="appear" align="center" style="padding: 10px; display: none;">
+          <div style="padding: 10px;">
+            <label for="">Name</label>
+            <input type="text" name="name" placeholder="Name">
+          </div>
+          <div style="padding: 10px;">
+            <label for="">Phone</label>
+            <input type="number" name="phone" placeholder="phone">
+          </div>
+          <div style="padding: 10px;">
+            <label for="">Adress</label>
+            <input type="text" name="address" placeholder="Adress">
+          </div>
+          <div style="padding: 10px;">
+            <input class="btn btn-success" type="submit" value="Order Confirm" >
+            <button id="close" type="button" class="btn btn-danger">Close</button>
+          </div>
 
-
-
-      </div>
-
+        </div>
+      </form>
     </div>
 
 
