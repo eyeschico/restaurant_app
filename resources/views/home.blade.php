@@ -53,6 +53,10 @@ https://templatemo.com/tm-558-klassy-cafe
 						<!-- ***** Logo Start ***** -->
 						<a href="index.html" class="logo">
 							<img src="assets/images/klassy-logo.png" align="klassy cafe html template">
+
+              <a class="menu-trigger">
+                <span>Menu</span>
+              </a>
 						</a>
 						<!-- ***** Logo End ***** -->
 						<!-- ***** Menu Start ***** -->
@@ -88,7 +92,7 @@ https://templatemo.com/tm-558-klassy-cafe
 
               @auth 
               <a href="{{url('/showcart', Auth::user()->id)}}">
-              Cart {{$count}}
+              Cart {{$count ?? ''}}
               </a>
               @endauth
               
@@ -114,10 +118,7 @@ https://templatemo.com/tm-558-klassy-cafe
                   </div>
                 @endif
               </li>
-						</ul>
-            <a class='menu-trigger'>
-							<span>Menu</span>
-						</a>       
+						</ul>    
 						<!-- ***** Menu End ***** -->
 					</nav>
 				</div>
