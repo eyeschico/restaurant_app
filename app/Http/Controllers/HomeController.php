@@ -12,9 +12,14 @@ use App\Models\Order;
 class HomeController extends Controller
 {
     public function index(){
-      $data=food::all();
-      $data2=chef::all();
-      return view("home", compact("data", "data2"));
+      //Si l'user se connecte alors redirection sinon vers home
+      if(Auth::id()){
+        return redirect('redirects');
+      }
+      else
+        $data=food::all();
+        $data2=chef::all();
+        return view("home", compact("data", "data2"));
     }
 
     public function redirects(){
