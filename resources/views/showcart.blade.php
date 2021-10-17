@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<title>Klassy Cafe</title>
 
 	<!-- Additional CSS Files -->
@@ -105,7 +105,7 @@
                   @endif
                 </li>
               </ul>
-              <a class='menu-trigger'>
+              <a style="display: none;" class='menu-trigger'>
                 <span>Menu</span>
               </a>       
               <!-- ***** Menu End ***** -->
@@ -140,8 +140,52 @@
         @endforeach
 
       </table>
+
+      <div align="center" style="padding: 10px;">
+        <button class="btn btn-primary" id="order">Order Now</button>
+      </div>
+
+      <div id="appear" align="center" style="padding: 10px; display: none;">
+        <div style="padding: 10px;">
+          <label for="">Name</label>
+          <input type="text" name="name" placeholder="Name">
+        </div>
+        <div style="padding: 10px;">
+          <label for="">Phone</label>
+          <input type="number" name="phone" placeholder="phone">
+        </div>
+        <div style="padding: 10px;">
+          <label for="">Adress</label>
+          <input type="text" name="adress" placeholder="Adress">
+        </div>
+        <div style="padding: 10px;">
+
+          <input class="btn btn-success" type="submit" value="Order Confirm" >
+          <button id="close" class="btn btn-danger">Close</button>
+        </div>
+
+
+
+
+      </div>
+
     </div>
 
+
+<script type="text/javascript">
+  //apparition du form
+  $("#order").click(
+    function(){
+      $("#appear").show();
+    }
+  )
+
+  $("#close").click(
+    function(){
+      $("#appear").hide();
+    }
+  )
+</script>
 
 
   <!-- jQuery -->
