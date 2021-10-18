@@ -31,25 +31,15 @@ Route::post("/orderconfirm", [HomeController::class,"orderconfirm"]);
 
 /*ADMIN CONTROLLERS*/
 
-/* Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
-{
-    Route::get('/admin', function()
-    {
-        // can only access this if type == A
-    });
-
-});
- */
-
 Route::get("/users", [AdminController::class,"user"]);
 
-Route::get("/deletemenu/{id}", [AdminController::class,"deletemenu"]);
+Route::get("/deleteuser/{id}", [AdminController::class,"deleteuser"]);
 
 Route::get("/foodmenu", [AdminController::class,"foodmenu"]);
 
-Route::post("/uploadfood", [AdminController::class,"upload"]);
+Route::get("/deletemenu/{id}", [AdminController::class,"deletemenu"]);
 
-Route::get("/deleteuser/{id}", [AdminController::class,"deleteuser"]);
+Route::post("/uploadfood", [AdminController::class,"upload"]);
 
 Route::get("/updateview/{id}", [AdminController::class,"updateview"]);
 
