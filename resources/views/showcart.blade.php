@@ -40,7 +40,7 @@
           <div class="col-12">
             <nav class="main-nav">
               <!-- ***** Logo Start ***** -->
-              <a href="{{url('')}}" class="logo">
+              <a href="{{url('/')}}" class="logo">
                 <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
               </a>
               <!-- ***** Logo End ***** -->

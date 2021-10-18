@@ -1,0 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.italotlogo{
+  font-family: 'Righteous', serif, sans-serif;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #af0000 !important;
+}
+
+.navbg{
+  background-color: #ffffff!important;
+}
+
+

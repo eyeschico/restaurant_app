@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Italote the best fictive fast food">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Italote the best fictive fast food">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>ITALOT</title>
+  <title>ITALOT</title>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
-    <link rel="stylesheet" href="assets/css/owl-carousel.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
-	</head>
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
+  <link rel="stylesheet" href="assets/css/owl-carousel.css">
+  <link rel="stylesheet" href="assets/css/lightbox.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+</head>
 	
 	<body>
 	
@@ -30,91 +31,85 @@
 	</div>  
 	<!-- ***** Preloader End ***** -->
 	
-	
+
 	<!-- ***** Header Area Start ***** -->
-	<header class="header-area header-sticky">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<nav class="main-nav">
-						<!-- ***** Logo Start ***** -->
-            <div style="margin-top: 2rem;">
-              <a href="{{url('')}}" class="logo">
-                <h3>ITALOT</h3>
-                <a class="menu-trigger">
-                  <span>Menu</span>
+  <nav class="navbar navbar-expand-lg navbar-light navbg">
+    <!-- ***** Logo Start ***** -->
+    <div>
+      <a class="italotlogo" href="{{url('/')}}">ITALOT</a>  
+    </div>
+
+      
+    <!-- ***** Logo End ***** -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{url('/')}}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#menu">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#chefs">Chefs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reservation">Reservation</a>
+        </li>
+        </ul>
+          @if (Route::has('login'))
+            @auth
+            <ul class="nav navbar-nav navbar-right" style="padding-right: 100px;">
+              <li class="nav-item">
+                @auth 
+                <a class="nav-link" href="{{url('/showcart', Auth::user()->id)}}">Cart {{$count ?? ''}}</a>
+                @endauth
+
+                @guest
+                <a class="nav-link" href="#menu">Cart [0]</a>
+                  
+                @endguest
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ Auth::user()->name }}
                 </a>
-              </a>              
-            </div>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ route('profile.show') }}">Profile</a>
+                  <a class="dropdown-item">
+                    <form method="POST" action="{{ route('logout') }}">
+                      @csrf
+                      <x-jet-dropdown-link class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                      </x-jet-dropdown-link>
+                    </form>
+                  </a>
+                </div>
+              </li>            
+            </ul>
 
-						<!-- ***** Logo End ***** -->
-						<!-- ***** Menu Start ***** -->
-						<ul class="nav">
-							<li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-							<li class="scroll-to-section"><a href="#about">About</a></li>
-						   	
-						<!-- 
-							<li class="submenu">
-								<a href="javascript:;">Drop Down</a>
-								<ul>
-									<li><a href="#">Drop Down Page 1</a></li>
-									<li><a href="#">Drop Down Page 2</a></li>
-									<li><a href="#">Drop Down Page 3</a></li>
-								</ul>
-							</li>
-						-->
-							<li class="scroll-to-section"><a href="#menu">Menu</a></li>
-							<li class="scroll-to-section"><a href="#chefs">Chefs</a></li> 
-							<li class="submenu">
-								<a href="javascript:;">Features</a>
-								<ul>
-									<li><a href="#">Features Page 1</a></li>
-									<li><a href="#">Features Page 2</a></li>
-									<li><a href="#">Features Page 3</a></li>
-									<li><a href="#">Features Page 4</a></li>
-								</ul>
-							</li>
-							<!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-							<li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
 
-							<li class="scroll-to-section">
+              @else
 
-              @auth 
-              <a href="{{url('/showcart', Auth::user()->id)}}">
-              Cart {{$count ?? ''}}
-              </a>
-              @endauth
-              
-              @guest
-                Cart [0]
-              @endguest
-              </li>
-
-              <li>
-                @if (Route::has('login'))
-                  <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                      @auth
-                        <li>
-                          <x-app-layout>
-                          </x-app-layout>
-                        </li>
-                      @else
-                        <li><a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a></li>
-                          @if (Route::has('register'))
-                            <li><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a></li>
-                          @endif
-                      @endauth
-                  </div>
+              <li class="nav-item">
+                <li><a href="{{ route('login') }}" class="nav-link">Log in</a></li>
+                @if (Route::has('register'))
+                  <li><a href="{{ route('register') }}" class="nav-link">Register</a></li>
                 @endif
-              </li>
-						</ul>    
-						<!-- ***** Menu End ***** -->
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
+              </li>  
+            @endauth
+          @endif
+      
+    </div>
+  </nav>
 	<!-- ***** Header Area End ***** -->
+  
 
 	<!-- ***** Main Banner Area Start ***** -->
 	<div id="top">
