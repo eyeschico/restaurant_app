@@ -29,6 +29,7 @@ font & reset css
 --------------------------------------------- 
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 /* 
 ---------------------------------------------
 reset
@@ -251,7 +252,6 @@ header
 
 .header-area .main-nav .logo {
   line-height: 100px;
-  color: #fff;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
@@ -674,7 +674,7 @@ banner
 }
 
 #top .left-content h4 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Righteous', cursive;
   color: #fff;
   font-size: 54px;
   font-weight: 700;

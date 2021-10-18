@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class AdminMiddleware
@@ -17,13 +17,12 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-      $userdata=user::all();
-      $usertype= $userdata->usertype=$request->usertype;
+/*       $usertype= Auth::user()->usertype;
 
       if ($request->$usertype != 1)
       {
         return redirect('redirects');
-      }
+      } */
       return $next($request);
     }
 

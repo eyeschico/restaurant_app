@@ -40,13 +40,13 @@
           <div class="col-12">
             <nav class="main-nav">
               <!-- ***** Logo Start ***** -->
-              <a href="index.html" class="logo">
+              <a href="{{url('')}}" class="logo">
                 <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
               </a>
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
-                <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                <li class="scroll-to-section"><a href="{{url('')}}" class="active">Home</a></li>
                 <li class="scroll-to-section"><a href="#about">About</a></li>
                   
               <!-- 
