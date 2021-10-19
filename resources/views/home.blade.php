@@ -1,24 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+@include('homehead')
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Italote the best fictive fast food">
-  <meta name="author" content="">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <title>ITALOT</title>
-
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
-  <link rel="stylesheet" href="assets/css/owl-carousel.css">
-  <link rel="stylesheet" href="assets/css/lightbox.css">
-  <link rel="stylesheet" href="assets/css/header.css">
-</head>
-	
 	<body>
 	
 	<!-- ***** Preloader Start ***** -->
@@ -32,56 +13,13 @@
 	<!-- ***** Preloader End ***** -->
 	
 
-	<!-- ***** Header Area Start ***** -->
+	<!-- ***** Nav Start ***** -->
   @include('homenav')
-	<!-- ***** Header Area End ***** -->
+	<!-- ***** Nav End ***** -->
   
 
 	<!-- ***** Main Banner Area Start ***** -->
-	<div id="top">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="left-content">
-						<div class="inner-content">
-							<h4>ITALOT</h4>
-							<h6>THE BEST EXPERIENCE</h6>
-							<div class="main-white-button scroll-to-section">
-								<a href="#reservation">Make A Reservation</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-8">
-					<div class="main-banner header-text">
-						<div class="Modern-Slider">
-						  <!-- Item -->
-						  <div class="item">
-							<div class="img-fill">
-								<img src="assets/images/slide-01.jpg" alt="">
-							</div>
-						  </div>
-						  <!-- // Item -->
-						  <!-- Item -->
-						  <div class="item">
-							<div class="img-fill">
-								<img src="assets/images/slide-02.jpg" alt="">
-							</div>
-						  </div>
-						  <!-- // Item -->
-						  <!-- Item -->
-						  <div class="item">
-							<div class="img-fill">
-								<img src="assets/images/slide-03.jpg" alt="">
-							</div>
-						  </div>
-						  <!-- // Item -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  @include('mainbanner')
 	<!-- ***** Main Banner Area End ***** -->
 
 	<!-- ***** About Area Starts ***** -->
