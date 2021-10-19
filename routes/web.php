@@ -19,7 +19,7 @@ use App\Http\Controllers\AdminController;
 
 Route::get("/", [HomeController::class,"index"]);
 
-Route::get("/redirects", [HomeController::class,"redirects"]);
+Route::get("/home", [HomeController::class,"home"]);
 
 Route::post("/addcart/{id}", [HomeController::class,"addcart"]);
 

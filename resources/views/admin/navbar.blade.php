@@ -1,6 +1,6 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-    <h3><a href="{{url('/redirects')}}">Admin Panel</a></h3>
+    <h3><a href="{{url('/home')}}">Admin Panel</a></h3>
   </div>
   <ul class="nav">
     <li class="nav-item nav-category">

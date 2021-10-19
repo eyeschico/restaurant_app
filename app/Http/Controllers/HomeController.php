@@ -14,7 +14,7 @@ class HomeController extends Controller
   public function index(){
   //Si l'user se connecte alors redirection sinon vers home
     if(Auth::id()){
-      return redirect('redirects');
+      return redirect('home');
     }
     else
       $data=food::all();
@@ -22,7 +22,7 @@ class HomeController extends Controller
       return view("home", compact("data", "data2"));
   }
 
-  public function redirects(){
+  public function home(){
     $data=food::all();
     $data2=chef::all();
     $usertype= Auth::user()->usertype;

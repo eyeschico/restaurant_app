@@ -21,7 +21,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
       if($usertype == 0){
-        return redirect('/redirects');
+        return redirect('/home');
       }
       else{
         $data=user::all();
@@ -34,7 +34,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
     if($usertype == 0){
-      return redirect('/redirects');
+      return redirect('/home');
     }
     else{
       $data=user::find($id);
@@ -48,7 +48,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
     if($usertype == 0){
-      return redirect('/redirects');
+      return redirect('/home');
     }
     else{
       $data=food::find($id);
@@ -62,7 +62,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
     if($usertype == 0){
-      return redirect('/redirects');
+      return redirect('/home');
     }
     else{
       $data= food::all();
@@ -75,7 +75,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
     if($usertype == 0){
-      return redirect('/redirects');
+      return redirect('/home');
     }
     else{
       $data= food::find($id);
@@ -87,7 +87,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
       if($usertype == 0){
-        return redirect('/redirects');
+        return redirect('/home');
       }
       else{
         $data= food::find($id);
@@ -108,7 +108,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
       if($usertype == 0){
-        return redirect('/redirects');
+        return redirect('/home');
       }
       else{
         $data = new food;
@@ -129,7 +129,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
       if($usertype == 0){
-        return redirect('/redirects');
+        return redirect('/home');
       }
       else{
         $data = new reservation;
@@ -151,7 +151,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
       if($usertype == 0){
-        return redirect('/redirects');
+        return redirect('/home');
       }
       else{
         $data=reservation::all();
@@ -163,7 +163,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
       if($usertype == 0){
-        return redirect('/redirects');
+        return redirect('/home');
       }
       else{
         $data=chef::all();
@@ -175,7 +175,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
       if($usertype == 0){
-        return redirect('/redirects');
+        return redirect('/home');
       }
       else{
         $data = new chef;
@@ -194,7 +194,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
       if($usertype == 0){
-        return redirect('/redirects');
+        return redirect('/home');
       }
       else{
         $data=chef::find($id);
@@ -206,7 +206,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
       if($usertype == 0){
-        return redirect('/redirects');
+        return redirect('/home');
       }
       else{
         $data=chef::find($id);
@@ -228,7 +228,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
       if($usertype == 0){
-        return redirect('/redirects');
+        return redirect('/home');
       }
       else{
         $data=chef::find($id);
@@ -241,7 +241,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
     if($usertype == 0){
-      return redirect('/redirects');
+      return redirect('/home');
     }
     else{
       $data=order::all();
@@ -253,7 +253,7 @@ class AdminController extends Controller
     $usertype= Auth::user()->usertype;
 
     if($usertype == 0){
-      return redirect('/redirects');
+      return redirect('/home');
     }
     else{
       $search=$request->search;
