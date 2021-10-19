@@ -11,13 +11,11 @@
 		</div>
 	</div>  
 	<!-- ***** Preloader End ***** -->
-	
 
 	<!-- ***** Nav Start ***** -->
   @include('homenav')
 	<!-- ***** Nav End ***** -->
   
-
 	<!-- ***** Main Banner Area Start ***** -->
   @include('mainbanner')
 	<!-- ***** Main Banner Area End ***** -->
