@@ -1532,6 +1532,7 @@ responsive
   #top {
     height: auto;
   }
+  
   .header-area .main-nav .nav li.submenu:after {
     right: 3px;
   }
