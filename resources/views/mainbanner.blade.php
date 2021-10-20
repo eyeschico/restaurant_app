@@ -1,11 +1,12 @@
 <div id="top">
-  <div class="container-fluid">
+  <div class="container-fluid heightbanner">
     <div class="row">
       <div class="col-lg-4">
         <div class="left-content">
           <div class="inner-content">
+            <h6>Eat a lot with</h6>
             <h4>ITALOT</h4>
-            <h6>THE BEST EXPERIENCE</h6>
+            
             <div class="main-white-button scroll-to-section">
               <a href="#reservation">Make A Reservation</a>
             </div>

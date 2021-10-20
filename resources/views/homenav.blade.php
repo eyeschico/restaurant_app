@@ -13,7 +13,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto mainnav">
       <li class="nav-item">
-        <a class="nav-link " href="{{url('/')}}">Home</a>
+        <a class="nav-link " href="#top">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#about">About</a>
