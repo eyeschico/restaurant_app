@@ -10,34 +10,35 @@
       </div>
     </div>
   </div>
-  <div class="menu-item-carousel">
-    <div class="col-lg-12">
-      <div class="owl-menu-item owl-carousel">
+
+  <div class="carte-flex">
+
 
         @foreach($data as $data)
           <form action="{{url('/addcart', $data->id)}}" method="post">
             @csrf
+              <div class='carte'>
 
-            <div class="item">
-              <div style="background-image: url('/foodimage/{{$data->image}}');" class='card'>
-                <div class=''>
-                  <h1 class=''>{{$data->title}}</h1>
-                  <p class=''>{{$data->description}}</p>
-                  <div class="main-text-button">
-                    <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
+                  <div class="carte-image" style="background-image: url('/foodimage/{{$data->image}}');" ></div>
+                  <div class="carte-text" height="20">
+                    <h2>{{$data->title}}</h2>
+                    <p>{{$data->description}}</p>
                   </div>
-                </div>              
-                <div class=""><h6>{{$data->price}}€</h6></div>
-
-                <input type="number" name="quantity" min="1" value="0">
-                <input type="submit" value="Add cart">                
+                  <div class="carte-adds">
+                    <div class="add">
+                      <h4 class="price">{{$data->price}}€</h4>
+                    </div>
+                    <div class="add">
+                      <input class="quantity" type="number" name="quantity" min="1" value="0" >
+                    </div>
+                    <div class="add">
+                      <input class="submit" type="submit" value="Add cart">
+                    </div>
+                  </div> 
+ 
               </div>
-            </div>
           </form>
         @endforeach
-
-      </div>
-    </div>
   </div>
 </section>
 <!-- ***** Menu Area Ends ***** -->
