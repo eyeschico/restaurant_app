@@ -410,6 +410,7 @@ about
   padding: 20px 0px 0px 0px;
   position: relative;
   z-index: 9;
+  overflow-x: hidden;
 }
 
 #about .section-heading h2 {
@@ -417,8 +418,7 @@ about
 }
 
 #about img {
-  width: 100%;
-  overflow: hidden;
+  width: 20rem;
 }
 
 #about .left-text-content p {
@@ -429,30 +429,18 @@ about
   margin-left: 30px;
 }
 
-#about .right-content .thumb {
+#about .right-content .thumb{
   position: relative;
 }
 
-#about .right-content .thumb a {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 70px;
-  height: 70px;
-  display: inline-block;
-  line-height: 70px;
-  text-align: center;
-  background-color: #fb5849;
-  color: #fff;
-  border-radius: 50%;
-  transform: translate(-35px, -35px);
-  transition: all .3s;
+#btnControl {
+  display: none;
 }
 
-#about .right-content .thumb a:hover {
-  opacity: .9;
+#btnControl:checked + label > img {
+  margin-left: 50rem;
+  transition: 0.5s;
 }
-
 
 /*
 ---------------------------------------------
@@ -461,9 +449,10 @@ menu
 */
 
 #menu {
-  margin-top: 120px;
-  background-color: #fffafa;
-  padding: 120px 0px;
+  margin-top: 20px;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,92,61,1) 100%); 
+  padding: 100px 0px;
 }
 
 #menu .section-heading {
@@ -472,29 +461,13 @@ menu
 
 .card {
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 20rem;
   min-height: 400px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-}
-
-.card1 {
-  background-image: url(../images/menu-item-01.jpg);
-}
-.card2 {
-  background-image: url(../images/menu-item-02.jpg);
-}
-.card3 {
-  background-image: url(../images/menu-item-03.jpg);
-}
-.card4 {
-  background-image: url(../images/menu-item-04.jpg);
-}
-.card5 {
-  background-image: url(../images/menu-item-05.jpg);
 }
 
 .info {
