@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light navbg">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbg">
   <!-- ***** Logo Start ***** -->
   <div>
     <a class="italotlogo" href="{{url('/')}}">ITALOT</a>  

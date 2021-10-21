@@ -218,7 +218,7 @@ banner
 
 #top .left-content {
   background: rgb(135,10,31);
-  background: linear-gradient(180deg, rgba(135,10,31,1) 0%, rgba(241,103,85,1) 100%);
+  background: linear-gradient(180deg, rgba(135,10,31,1) 20%, rgba(231,40,74,1) 100%);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
