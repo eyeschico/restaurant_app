@@ -193,12 +193,16 @@ body {
 }
 
 .section-heading h2 {
+  font-family: 'Righteous';
+  text-transform: uppercase;
+  letter-spacing: 1px;
   line-height: 40px;
   margin-top: 20px;
   margin-bottom: 25px; 
   font-size: 30px;
   font-weight: 900;
-  color: #2a2a2a;
+  color: #870a1f;
+  text-shadow: -2px 2px 2px #5205124b;
 }
 /* 
 ---------------------------------------------
@@ -406,8 +410,7 @@ about
 */
 
 #about {
-  margin-top: 20px;
-  padding: 20px 0px 0px 0px;
+  padding: 100px 0px 0px 0px;
   position: relative;
   z-index: 9;
   overflow-x: hidden;
@@ -420,6 +423,8 @@ about
 #about img {
   width: 20rem;
 }
+
+
 
 #about .left-text-content p {
   margin-bottom: 25px;
@@ -457,7 +462,7 @@ menu
 #menu {
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,92,61,1) 100%); 
-  padding: 20px 0px;
+  padding: 100px 0px;
 }
 
 #menu .section-heading {
@@ -473,7 +478,7 @@ menu
   grid-template-areas: "image" "text" "adds";
 
   font-family: 'Poppins', sans-serif, serif;
-  border-radius: 18px;
+  border-radius: 8px;
   background: white;
   box-shadow: 5px 5px 10px #fd5d3d60;
   text-align: center;
@@ -483,8 +488,8 @@ menu
 
 .carte-image{
   grid-area: image;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -511,8 +516,8 @@ color:#fd5c3d;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   background: #e7284a;
 }
 
@@ -593,118 +598,112 @@ chefs
 
 #chefs {
   background: rgb(253,92,61);
-  background: linear-gradient(180deg, rgba(253,92,61,1) 15%, rgba(254,155,136,1) 70%, rgba(255,255,255,1) 100%);
+background: linear-gradient(180deg, rgba(253,92,61,1) 0%, rgba(144,11,11,1) 100%);
+  padding: 100px 0px;
 }
 
 #chefs .section-heading {
   margin-bottom: 70px;
+  
 }
 
 #chefs .section-heading h6 {
   padding-left: 0px;
+  color: white;
 }
 
 #chefs .section-heading h6:before {
   display: none;
 }
 
-#chefs .chef-item {
+#chefs .section-heading h2{
+  color: white;
+  text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.foodchef-carte {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 300px 50px;
+  grid-template-areas: "facebook" "twitter" "instagram";
+  font-family: 'Poppins', sans-serif, serif;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px #55080888;
   text-align: center;
-  border: 1px solid #afafaf;
-  padding: 5px;
-  transition: all .5s;
-  border-radius: 3px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+
+  transition: 0.5s ease;
+  cursor: default;
 }
 
-#chefs .chef-item:hover {
-  border-color: #fb5849;
+.foodchef-text{
+  color: white;
+  font-family: 'Righteous', serif, sans-serif;
+  text-transform: uppercase;
+  text-align: start;
+  margin: 20px;
+  margin-top: 245px;
+  margin-bottom: 0;
+  text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-#chefs .chef-item:hover .down-content h4 {
-  color: #fb5849;
+.foodchef-text h2{
+  font-size: 1.5rem;
 }
 
-#chefs .chef-item .thumb {
-  position: relative;
+.foodchef-text p{
+  color: white;
+  font-family: 'Righteous', serif, sans-serif;
+  text-transform: uppercase;
+  text-align: start;
 }
 
-#chefs .chef-item .thumb img {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+.foodchef-color{
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 350px;
+  transition: 1s;
 }
 
-#chefs .chef-item .thumb .overlay {
-  position: absolute;
-  background-color: #2a2a2a;
-  border-radius: 3px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  opacity: 0;
-  visibility: hidden;
-  transition: all .3s;
+.foodchef-color:hover{
+  background: rgb(231,40,74);
+  background: linear-gradient(0deg, rgba(231,40,74,1) 0%, rgba(255,255,255,0) 100%);
+  
 }
 
-#chefs .chef-item .thumb ul.social-icons {
-  position: absolute;
-  z-index: 11;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  transition: all .5s;
-  opacity: 0;
-  visibility: hidden;
+.social-icons{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
 }
 
-#chefs .chef-item .thumb ul.social-icons li {
-  display: inline-block;
-  margin: 0px 5px;
-}
-
-#chefs .chef-item .thumb ul.social-icons li a {
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  color: #2a2a2a;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 40px;
-  display: inline-block;
-  transition: all .5s;
-}
-
-#chefs .chef-item .thumb ul.social-icons li a:hover {
-  background-color: #fb5849;
-}
-
-#chefs .chef-item:hover .overlay {
-  opacity: .9;
-  visibility: visible;
-}
-
-#chefs .chef-item:hover ul.social-icons {
-  opacity: 1;
-  visibility: visible;
-}
-
-#chefs .chef-item .down-content {
-  padding: 20px 0px;
-}
-
-#chefs .chef-item .down-content h4 {
-  transition: all .3s;
+.social-icons li a{
   font-size: 20px;
-  font-weight: 700;
-  color: #2a2a2a;
+  color: white;
+  margin-right: 10px;
+  transition: 0.3s;
 }
 
-#chefs .chef-item .down-content span {
-  font-size: 14px;
-  color: #2a2a2a;
+.social-icons li a:hover{
+  color: #870a1f;
+}
+
+.foodchef-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.foodchef-carte:hover{
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px #7508085e;
 }
 
 
