@@ -431,6 +431,12 @@ about
 
 #about .right-content .thumb{
   position: relative;
+  transition: 0.2s;
+}
+
+#about .right-content .thumb:hover{
+  position: relative;
+  margin-left: 10px;
 }
 
 #btnControl {
@@ -449,10 +455,9 @@ menu
 */
 
 #menu {
-  margin-top: 20px;
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,92,61,1) 100%); 
-  padding: 100px 0px;
+  padding: 20px 0px;
 }
 
 #menu .section-heading {
@@ -481,6 +486,8 @@ menu
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
 }
 
@@ -491,10 +498,12 @@ menu
 
 .carte-text h2{
   margin-bottom: 20px;
-  }
+  font-family: 'Righteous', sans-serif, serif;
+  color: #e7284a;
+}
 
 .carte-text p{
-color:gray;
+color:#fd5c3d;
 }
 
 .carte-adds{
@@ -570,7 +579,7 @@ input[type='number']{
 .carte-flex{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -583,7 +592,8 @@ chefs
 */
 
 #chefs {
-  padding-top: 120px;
+  background: rgb(253,92,61);
+  background: linear-gradient(180deg, rgba(253,92,61,1) 15%, rgba(254,155,136,1) 70%, rgba(255,255,255,1) 100%);
 }
 
 #chefs .section-heading {
