@@ -11,53 +11,62 @@
 
     <div>
     
-      <div style="position: relative; top: 60px; right: -150px;">
-        <form action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data">
+      <div class="italotcontainer">
+        <h2 class="italotadmintitle">Food Menu</h2>
+        <form class="italotform" action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data">
           @csrf
 
-          <div>
-            <label for="">Title</label>
-            <input style="color: blue;" type="text" name="title" placeholder="Write a title" required>
+          <div class="italotinput">
+            <h4>Add a food menu</h4>
           </div>
-          <div>
-            <label for="">Price</label>
-            <input style="color: blue;" type="number" name="price" placeholder="Price" required>
+
+          <div class="italotinput">
+            <label>Title</label>
+            <input type="text" name="title" placeholder="Write a title" required>
           </div>
-          <div>
-            <label for="">Image</label>
+          <div class="italotinput">
+            <label>Price</label>
+            <input type="number" name="price" placeholder="Price" required>
+          </div>
+          <div class="italotinput">
+            <label>Image</label>
             <input type="file" name="image" required>
           </div>
-          <div>
-            <label for="">Description</label>
-            <input style="color: blue;" type="text" name="description" placeholder="Write a description" required>
+          <div class="italotinput">
+            <label>Description</label>
+            <input class="italotdescription" type="text" name="description" placeholder="Write a description" required>
           </div>
-          <div>
-            <input style="color: black;" type="submit" value="Save">
+          <div class="italotsubmit">
+            <input type="submit" value="Save">
           </div>
         </form>
 
-        <div>
-          <table bgcolor="black">
+
+
+        <table>
+          <thead>
             <tr>
-              <th style="padding: 30px;">Food Name</th>
-              <th style="padding: 30px;">Price</th>
-              <th style="padding: 30px;">Description</th>
-              <th style="padding: 30px;">Image</th>
-              <th style="padding: 30px;">Action</th>
-              <th style="padding: 30px;">Action</th>
+              <th>Food Name</th>
+              <th>Price</th>
+              <th>Description</th>
+              <th>Image</th>
+              <th>Update</th>      
+              <th>Delete</th>
             </tr>
-            @foreach($data as $data)
-              <tr align="center">
-                <td>{{$data->title}}</td>
-                <td>{{$data->price}} €</td>
-                <td>{{$data->description}}</td>
-                <td><img height="200" width="200" src="/foodimage/{{$data->image}}" alt=""></td>
-                <td><a href="{{url('/deletemenu', $data->id)}}">Delete</a></td>
-                <td><a href="{{url('/updateview', $data->id)}}">Update</a></td>
-              </tr>
+          </thead>
+          <tbody>
+          @foreach($data as $data)
+            <tr>
+              <td data-column="Title">{{$data->title}}</td>
+              <td data-column="Price">{{$data->price}} €</td>
+              <td data-column="Description">{{$data->description}}</td>
+              <td data-column="Image"><img height="200" width="200" src="/foodimage/{{$data->image}}" alt=""></td>
+              <td data-column="Update"><a href="{{url('/updateview', $data->id)}}">Update</a></td>
+              <td data-column="Delete"><a href="{{url('/deletemenu', $data->id)}}">Delete</a></td>
+            </tr>
             @endforeach
-          </table>
-        </div>
+          </tbody>
+        </table>
 
       </div>
 

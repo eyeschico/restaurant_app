@@ -47,8 +47,158 @@ html {
 
 /* ADMIN */
 
+.italotcontainer{
+  background-color: rgb(218, 218, 218);
+  height: 300vh;
+}
+
+.italotcontainer tbody tr td a{
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
 .navbgadmin{
   background: rgb(0,0,0);
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(46,46,46,1) 100%);
+}
+
+.italotform{
+  border-collapse: collapse; 
+	margin:50px auto;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  font-family: 'Zen Kaku Gothic New';
+  font-weight: 500;
+  width: 750px; 
+  border-radius: 5px;
+}
+
+.italotinput{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.italotsubmit input{
+  border: none;
+  font-family: 'Zen Kaku Gothic New', sans-serif, serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  transition: 0.2s;
+}
+
+.italotsubmit input:hover{
+  color: white;
+  background-color: black;
+}
+
+.italotform input{
+  border: none;
+  border-radius: 5px;
+  color: black;
+}
+
+.italotdescription{
+  height: 5rem;
+}
+
+.italotadmintitle{
+  font-family: 'Righteous', sans-serif, serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(177, 177, 177);
+  width: 750px; 
+  padding-top: 4rem;
+  padding-left: 2rem;
+}
+
+table { 
+	width: 750px; 
+	border-collapse: collapse; 
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: black;
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	text-align: left; 
+	font-size: 18px;
+  border: 1px solid rgb(163, 163, 163); 
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+  .italotform{
+    width: 100%;
+    border-radius: 0px;
+  }
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
 }
 
