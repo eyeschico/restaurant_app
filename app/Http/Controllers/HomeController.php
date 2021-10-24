@@ -66,8 +66,13 @@ class HomeController extends Controller
     $count= cart::where('user_id', $id)->count(); 
     //Seul l'user actuel peut voir son panier sinon redirection en arrière
     if(Auth::id()==$id){
-      $data=cart::where('user_id', $id)->join('food', 'carts.food_id', '=', 'food.id')->get();
-      $data2=cart::select('*')->where('user_id', '=', $id)->get();
+      $data=cart::where('user_id', $id)
+        ->join('food', 'carts.food_id', '=', 'food.id')
+        ->get();
+      $data2=cart::select('*')
+        ->where('user_id', '=', $id)
+        ->get();
+        
       return view('showcart', compact('count', 'data', 'data2'));
     }
     else{

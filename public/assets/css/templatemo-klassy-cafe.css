@@ -723,7 +723,7 @@ reservation
 
 #reservation .section-heading h2 {
   color: #fff;
-  font-weight: 700;
+  text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 #reservation .section-heading h6:before {

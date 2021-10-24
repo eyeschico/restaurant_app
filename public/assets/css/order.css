@@ -1,0 +1,4 @@
+.foodname{
+  display: flex;
+  flex-direction: row;
+}

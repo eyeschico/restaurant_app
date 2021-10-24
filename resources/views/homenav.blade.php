@@ -33,11 +33,11 @@
           <ul class="nav navbar-nav navbar-right navlogin">
             <li class="nav-item">
               @auth 
-              <a class="nav-link" href="{{url('/showcart', Auth::user()->id)}}">Cart {{$count ?? ''}}</a>
+              <a class="nav-link" href="{{url('/showcart', Auth::user()->id)}}">Cart <span class="howmuch">{{$count ?? ''}}</span></a>
               @endauth
 
               @guest
-              <a class="nav-link" href="#menu">Cart [0]</a>
+              <a class="nav-link" href="#menu">Cart <span class="howmuch">0</span></a>
                 
               @endguest
             </li>

@@ -14,12 +14,28 @@ html {
 }
 
 .navlogin{
-  padding-right: 5rem;
+  padding-right: 6rem;
 }
 
 .mainnav{
   padding-left: 2rem;
   color: #fec566 !important;
+}
+
+.nav-link span{
+  color: #870a1f;
+  background-color: #fec566;
+  padding: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  border-radius: 2px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.nav-link span:hover{
+  color: #fd5c3d;
+  background-color: #fff;
 }
 
 @media (max-width: 992px) {
