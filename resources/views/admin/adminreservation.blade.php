@@ -1,46 +1,39 @@
-<x-app-layout>
-</x-app-layout>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @include("admin.admincss")
+  @include("homehead")
   </head>
     <body>
-    <div class="container-scroller">
-      @include("admin.navbar")
-
-      <div style="position: relative; top: 70px; right: -150px;">
-        <table bgcolor="grey" border="1px">
-          <tr>
-            <th style="padding: 30px;">Name</th>
-            <th style="padding: 30px;">Email</th>
-            <th style="padding: 30px;">Phone</th>
-            <th style="padding: 30px;">Guest</th>
-            <th style="padding: 30px;">Date</th>
-            <th style="padding: 30px;">Time</th>
-            <th style="padding: 30px;">Message</th>
-          </tr>
-
-          @foreach($data as $data)
-            <tr align="center">
-              <td>{{$data->name}}</td>
-              <td>{{$data->email}}</td>
-              <td>{{$data->phone}}</td>
-              <td>{{$data->guest}}</td>
-              <td>{{$data->date}}</td>
-              <td>{{$data->time}}</td>
-              <td>{{$data->message}}</td>
+    @include("admin.adminnav")
+      <div class="italotcontainer">
+      <h2 class="italotadmintitle">Users</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Guest</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Message</th>
             </tr>
-          @endforeach
-          
+          </thead>
+          <tbody>
+            @foreach($data as $data)
+              <tr>
+                <td data-column="Name">{{$data->name}}</td>
+                <td data-column="E-Mail">{{$data->email}}</td>
+                <td data-column="Phone">{{$data->phone}}</td>
+                <td data-column="Guest">{{$data->guest}}</td>
+                <td data-column="Date">{{$data->date}}</td>
+                <td data-column="Time">{{$data->time}}</td>
+                <td data-column="Message">{{$data->message}}</td>
+              </tr>
+            @endforeach
+          </tbody>
         </table>
       </div>
-
-
-
-
-    </div>
-    @include("admin.adminscript")
+    @include("homescript")
     </body>
 </html>
