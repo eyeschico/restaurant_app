@@ -1,6 +1,3 @@
-<x-app-layout>
-</x-app-layout>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,9 +5,6 @@
   </head>
     <body>
     @include("admin.adminnav")
-
-    <div>
-    
       <div class="italotcontainer">
         <h2 class="italotadmintitle">Food Menu</h2>
         <form class="italotform" action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data">
@@ -69,8 +63,6 @@
         </table>
 
       </div>
-
-    </div>
     @include("homescript")
     </body>
 </html>
