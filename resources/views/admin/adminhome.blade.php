@@ -1,13 +1,14 @@
-<x-app-layout>
-</x-app-layout>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @include("homehead")
+  @include("homehead")
   </head>
     <body>
     @include("admin.adminnav")
-    @include("homescript")
+      <div class="italotcontainer">
+
+     
+      </div>
+      @include("homescript")
     </body>
 </html>
