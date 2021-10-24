@@ -4,12 +4,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @include("admin.admincss")
+    @include("homehead")
   </head>
     <body>
-    <div class="container-scroller">
-      @include("admin.navbar")
-    </div>
-    @include("admin.adminscript")
+    @include("admin.adminnav")
+    @include("homescript")
     </body>
 </html>

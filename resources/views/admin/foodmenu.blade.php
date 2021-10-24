@@ -4,12 +4,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @include("admin.admincss")
+  @include("homehead")
   </head>
     <body>
-    <div class="container-scroller">
-      @include("admin.navbar")
+    @include("admin.adminnav")
 
+    <div>
+    
       <div style="position: relative; top: 60px; right: -150px;">
         <form action="{{url('/uploadfood')}}" method="post" enctype="multipart/form-data">
           @csrf
@@ -61,6 +62,6 @@
       </div>
 
     </div>
-    @include("admin.adminscript")
+    @include("homescript")
     </body>
 </html>
