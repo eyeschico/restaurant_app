@@ -1,53 +1,56 @@
-<x-app-layout>
-</x-app-layout>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @include("admin.admincss")
+  @include("homehead")
   </head>
     <body>
-    <div class="container-scroller">
-      @include("admin.navbar")
+      @include("admin.adminnav")
+      <div class="italotcontainer">
+        <h2 class="italotadmintitle">Orders</h2>
+        <form class="italotform" action="{{url('/search')}}" method="get">
+          <div class="italotinput">
+            <h4>Search a user</h4>
+          </div>
 
-      <div class="container">
-
-      
-        <h1>Customer Orders</h1>
-
-        <form action="{{url('/search')}}" method="get">
-          <input type="text" name="search" style="color: blue;">
-          <input type="submit" value="Search" class="btn btn-success">
+          <div class="italotinput-search">
+            <input type="text" name="search">
+            <div class="italotsubmit">
+              <input type="submit" value="Search">  
+            </div>
+                     
+          </div>
         </form>
 
-        <div >
+        <div>
           <table>
-            <tr>
-              <td style="padding: 30px;">Name</td>
-              <td style="padding: 30px;">Phone</td>
-              <td style="padding: 30px;">Address</td>
-              <td style="padding: 30px;">Food Name</td>
-              <td style="padding: 30px;">Price</td>
-              <td style="padding: 30px;">Quantity</td>
-              <td style="padding: 30px;">Total Price</td>
-            </tr>
-
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Phone</td>
+                <td>Address</td>
+                <td>Food Name</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Total Price</td>
+              </tr>
+            </thead>
+            <tbody>
             @foreach($data as $data)
-            <tr align="center" style="background-color: black;">
-              <td>{{$data->name}}</td>
-              <td>{{$data->phone}}</td>
-              <td>{{$data->address}}</td>
-              <td>{{$data->foodname}}</td>
-              <td>{{$data->price}}</td>
-              <td>{{$data->quantity}}</td>
-              <!--multiplie le prix par la quantité-->
-              <td>{{$data->price*$data->quantity}}€</td>
-            </tr>
-            @endforeach
+              <tr>
+                <td data-column="Name">{{$data->name}}</td>
+                <td data-column="Phone">{{$data->phone}}</td>
+                <td data-column="Adress">{{$data->address}}</td>
+                <td data-column="Food Name">{{$data->foodname}}</td>
+                <td data-column="Price">{{$data->price}}</td>
+                <td data-column="Quantity">{{$data->quantity}}</td>
+                <!--multiplie le prix par la quantité-->
+                <td data-column="Total">{{$data->price*$data->quantity}}€</td>
+              </tr>
+            @endforeach              
+            </tbody>
           </table>
         </div>
       </div>
-    </div>
-    @include("admin.adminscript")
+      @include("homescript")
     </body>
 </html>

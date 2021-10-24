@@ -18,10 +18,10 @@
           <tbody>
           @foreach($data as $data)
             <tr>
-              <td data-column="First Name">{{$data->name}}</td>
-              <td data-column="Last Name">{{$data->email}}</td>
+              <td data-column="Name">{{$data->name}}</td>
+              <td data-column="E-Mail">{{$data->email}}</td>
               @if($data->usertype=="0")
-              <td><a href="{{url('/deleteuser',$data->id)}}">Delete</a></td>
+              <td data-column="Delete"><a href="{{url('/deleteuser',$data->id)}}">Delete</a></td>
               @else
               <td>Not Allowed</td>
               @endif   

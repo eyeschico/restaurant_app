@@ -6,7 +6,7 @@
     <body>
     @include("admin.adminnav")
       <div class="italotcontainer">
-      <h2 class="italotadmintitle">Users</h2>
+      <h2 class="italotadmintitle">Reservations</h2>
         <table>
           <thead>
             <tr>
