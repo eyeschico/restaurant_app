@@ -50,6 +50,6 @@
         </tbody>
       </table>
     </div>
-    @include("admin.adminscript")
+    @include("homescript")
   </body>
 </html>

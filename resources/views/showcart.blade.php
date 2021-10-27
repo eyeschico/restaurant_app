@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/order.css">
 	</head>
 	
 	<body>
@@ -112,38 +111,30 @@
     <!-- ***** Header Area End ***** -->
 
     <div id="top">
-    <div >
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Food Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
       <form action="{{url('orderconfirm')}}" method="post">
-        @csrf
+      @csrf
         @foreach($data as $data)
-          <div class="foodname">
-            <h6>Food Name</h6>
-            <input type="text" name="foodname[]" value="{{$data->title}}" hidden>{{$data->title}}
-          </div>
-
-          <div class="foodname">
-            <h6>Price</h6>
-            <input type="text" name="price[]" value="{{$data->price}}" hidden>{{$data->price}}€
-          </div>
-
-          <div class="foodname">
-            <h6>Quantity</h6>
-            <input type="text" name="quantity[]" value="{{$data->quantity}}" hidden>{{$data->quantity}}
-          </div>
+        <tr>
+          <td data-label="Food Name"><input type="text" name="foodname[]" value="{{$data->title}}" hidden>{{$data->title}}</td>
+          <td data-label="Price"><input type="text" name="price[]" value="{{$data->price}}" hidden>{{$data->price}}€</td>
+          <td data-label="Quantity"><input type="text" name="quantity[]" value="{{$data->quantity}}" hidden>{{$data->quantity}}</td>
+          <td data-label="Delete"><a href="{{url('/remove', $data->id)}}">Remove</a></td>
+        </tr>
         @endforeach
 
-        @foreach($data2 as $data2)
-          <div class="foodname">
-            <h6>Action</h6>
-            <a href="{{url('/remove', $data2->id)}}">Remove</a>
-          </div>
-        @endforeach  
-        
-      </form>
-
-    </div>
-
-
+      </tbody>
+    </table>
+    
 
           <div align="center" style="padding: 10px;">
             <button class="btn btn-primary" type="button" id="order">Order Now</button>
