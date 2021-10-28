@@ -237,7 +237,7 @@ class AdminController extends Controller
       return redirect('/home');
     }
     else{
-      $data=order::all();
+      $data=order::orderBy('orders.id', 'desc')->get();
       return view('admin.orders', compact('data'));
     }
   }
