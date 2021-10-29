@@ -9,12 +9,17 @@ html {
   font-size: 1.2rem;
   text-decoration: none;
   padding-left: 4.6rem;
+  transition: 0.2s ease-in-out;
+}
+
+.italotlogo:hover{
+  color: #ffcc00;
 }
 
 
 .navbg{
   background: rgba(255, 255, 255, 0.11);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(12.2px);
   -webkit-backdrop-filter: blur(12.2px);
 }
