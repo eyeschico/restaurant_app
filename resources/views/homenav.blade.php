@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top navbg">
   <!-- ***** Logo Start ***** -->
   <div>
-    <a class="italotlogo" href="{{url('/')}}">ITALOT</a>  
+    <a class="italotlogo" href="{{url('/')}}">Boomy's</a>  
   </div>
 
     
@@ -62,7 +62,7 @@
 
             @else
 
-            <li class="nav-item">
+            <li class="nav-item navlogin">
               <li><a href="{{ route('login') }}" class="nav-link">Log in</a></li>
               @if (Route::has('register'))
                 <li><a href="{{ route('register') }}" class="nav-link">Register</a></li>
