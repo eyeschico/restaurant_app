@@ -9,7 +9,7 @@
     </ul>
 
     <div class="uplogo">
-      <a class="italotfooter" href="{{url('/')}}">ITALOT</a>  
+      <a class="italotfooter" href="{{url('/')}}">Boomy's</a>  
     </div>
   </div>
 

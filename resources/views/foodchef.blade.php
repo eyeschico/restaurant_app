@@ -1,14 +1,8 @@
 <!-- ***** Chefs Area Starts ***** -->
 <section class="section" id="chefs">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="section-heading">
-          <h6>Our Chefs</h6>
-          <h2>We offer the best ingredients for you</h2>
-        </div>
-      </div>
-    </div>
+    <h6>Our Chefs</h6>
+    <h2>Our best chefs are here to treat you</h2>
 
     <div class="foodchef-flex">
       @foreach($data2 as $data2)
@@ -16,7 +10,7 @@
         <div class='foodchef-carte' style="background-image: url('/chefimage/{{$data2->image}}');">
           <div class="foodchef-color">
             <div class="foodchef-text" height="20">
-              <h2>{{$data2->name}}</h2>
+              <h4>{{$data2->name}}</h4>
               <p>{{$data2->speciality}}</p>
             </div>
             <ul class="social-icons">

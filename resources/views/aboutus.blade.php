@@ -52,11 +52,6 @@
 
       </div>
 
-      <div  align="center" class="main-scooter">
-        <div class="scooter">
-          <input type="checkbox" id="btnControl"/>
-          <label class="btn" for="btnControl"><img id="scooter" src="assets/images/scooter-svgrepo-com.svg" alt="italot restaurant like"></label>
-        </div>        
-      </div>
+
   
 </section>

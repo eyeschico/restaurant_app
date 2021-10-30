@@ -201,7 +201,7 @@ about
 */
 
 #about {
-  padding: 5rem 0px;
+  padding-top: 5rem;
   overflow-x: hidden;
 }
 
@@ -349,26 +349,27 @@ about
   }
 }
 
-.main-scooter{
-  margin-top: 5rem;
+/*
+---------------------------------------------
+menu
+---------------------------------------------
+*/
+#menu .scooter img {
+  width: 5rem;
 }
 
-#about .scooter img {
-  width: 10rem;
-}
 
-
-#about .scooter{
+#menu .scooter{
   position: relative;
   transition: 0.2s;
 }
 
-#about .scooter:hover{
+#menu .scooter:hover{
   position: relative;
   margin-left: 10px;
 }
 
-#about .scooter label{
+#menu .scooter label{
   margin-bottom: 0 !important;
 }
 
@@ -379,14 +380,8 @@ about
 #btnControl:checked + label > img {
   margin-left: 100rem;
   
-  transition: 0.5s;
+  transition: 1s;
 }
-
-/*
----------------------------------------------
-menu
----------------------------------------------
-*/
 
 #menu {
   padding: 5rem 0rem;
@@ -409,7 +404,6 @@ menu
   font-weight: bolder;
   line-height: 4.3rem;
   padding-top: 1rem;
-  margin-bottom: 4rem;
   background: -webkit-linear-gradient(#fe921f, #fd5c3d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -481,7 +475,7 @@ input[type='number']{
 .carte-adds{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding-top: 20px;
 
 }
@@ -530,7 +524,7 @@ input[type='number']{
 .carte-flex{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -553,28 +547,27 @@ input[type='number']{
 chefs
 ---------------------------------------------
 */
-
 #chefs {
+  padding: 3rem 0rem;
   background: rgb(253,92,61);
   background: linear-gradient(180deg, rgba(253,92,61,1) 0%, rgba(135,10,31,1) 100%);
-  padding: 50px 0px;
 }
 
-#chefs .section-heading {
-  margin-bottom: 70px;
-  
-}
-
-#chefs .section-heading h6 {
-  margin-left: 10px;
+#chefs h6{
+  text-transform: uppercase;
   color: white;
+  font-weight: bold;
+  padding-top: 2rem;
+  text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-#chefs .section-heading h6:before {
-  background-color: #fff;
-}
-
-#chefs .section-heading h2{
+#chefs h2{
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: bolder;
+  line-height: 4.3rem;
+  padding-top: 1rem;
+  margin-bottom: 4rem;
   color: white;
   text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.3);
 }
@@ -585,7 +578,6 @@ chefs
   grid-template-columns: 300px;
   grid-template-rows: 300px 50px;
   grid-template-areas: "facebook" "twitter" "instagram";
-  font-family: 'Poppins', sans-serif, serif;
   border-radius: 8px;
   box-shadow: 5px 5px 10px #55080888;
   text-align: center;
@@ -600,7 +592,6 @@ chefs
 
 .foodchef-text{
   color: white;
-  font-family: 'Righteous', serif, sans-serif;
   text-transform: uppercase;
   text-align: start;
   margin: 20px;
@@ -609,13 +600,12 @@ chefs
   text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.foodchef-text h2{
+.foodchef-text h4{
   font-size: 1.5rem;
 }
 
 .foodchef-text p{
   color: white;
-  font-family: 'Righteous', serif, sans-serif;
   text-transform: uppercase;
   text-align: start;
 }
@@ -664,6 +654,18 @@ chefs
   box-shadow: 5px 5px 15px #7508085e;
 }
 
+@media (max-width: 750px) {
+  .about-flex{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #chefs h2{
+    font-size: 3rem;
+    line-height: 3.4rem;
+    
+  }
+}
 
 /* 
 ---------------------------------------------
@@ -677,11 +679,15 @@ reservation
 
 #reservation .section-heading h6 {
   color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 #reservation .section-heading h2 {
   color: #fff;
+  text-transform: uppercase;
   text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
 }
 
 #reservation .section-heading h6:before {
@@ -861,22 +867,17 @@ footer {
   color: white;
   font-size: 20px;
   margin-right: 40px;
-  font-family: 'Righteous', sans-serif, serif;
+  transition: 0.2s ease-in;
+  font-weight: bold;
 }
 
 .italotfooter:hover{
-  color: #fe921f;
+  color: #e7284a;
 }
-
-
-
 
 
 /*responsive*/
 @media (max-width: 992px) {
-  #chefs .chef-item {
-    margin-bottom: 30px;
-  }
   #reservation .phone {
     margin-bottom: 60px;
   }
@@ -896,10 +897,7 @@ footer {
   }
 }
 
-
-
-
-
+/* Jumper */
 #preloader {
   overflow: hidden;
   background-color: #fb5849;
