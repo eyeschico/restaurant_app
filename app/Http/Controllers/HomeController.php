@@ -57,7 +57,7 @@ class HomeController extends Controller
       return redirect()->back();
     }
     else{
-      return redirect('/login');
+      return redirect('/register');
     }
   }
 

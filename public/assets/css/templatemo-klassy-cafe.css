@@ -241,7 +241,7 @@ about
 .about-left p{
   color: white;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 2.6rem;
 }
 
@@ -349,10 +349,6 @@ about
   }
 }
 
-
-
-
-
 .main-scooter{
   margin-top: 5rem;
 }
@@ -372,12 +368,17 @@ about
   margin-left: 10px;
 }
 
+#about .scooter label{
+  margin-bottom: 0 !important;
+}
+
 #btnControl {
   display: none;
 }
 
 #btnControl:checked + label > img {
   margin-left: 100rem;
+  
   transition: 0.5s;
 }
 
@@ -388,24 +389,39 @@ menu
 */
 
 #menu {
+  padding: 5rem 0rem;
+  overflow-x: hidden;
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,92,61,1) 100%); 
   padding: 50px 0px;
 }
 
-#menu .section-heading {
-  margin-bottom: 80px;
+#menu h6{
+  text-transform: uppercase;
+  color: #fe921f;
+  font-weight: bold;
+  padding-top: 2rem;
 }
 
+#menu h2{
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: bolder;
+  line-height: 4.3rem;
+  padding-top: 1rem;
+  margin-bottom: 4rem;
+  background: -webkit-linear-gradient(#fe921f, #fd5c3d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .carte {
-  margin: 20px;
+  margin: 35px;
   width: 300px;
   display: grid;
   grid-template-columns: 300px;
   grid-template-rows: 210px 210px 80px;
   grid-template-areas: "image" "text" "adds";
 
-  font-family: 'Poppins', sans-serif, serif;
   border-radius: 8px;
   background: white;
   box-shadow: 5px 5px 10px #fd5d3d60;
@@ -429,10 +445,10 @@ menu
   margin: 25px;
 }
 
-.carte-text h2{
+.carte-text h4{
   margin-bottom: 20px;
-  font-family: 'Righteous', sans-serif, serif;
   color: #e7284a;
+  font-weight: bold;
 }
 
 .carte-text p{
@@ -462,47 +478,49 @@ input[type='number']{
   
 }
 
+.carte-adds{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 20px;
+
+}
+
 .carte-adds .submit{
-  height: 30px;
-  width: 80px;
-  margin: 0;
-  margin-right: 20px;
-  margin-top: 25px;
+  margin-top: 5px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: bold;
   color: white;
   border: none;
   text-transform: uppercase;
   background-color: transparent;
-  transition: 0.5s;
+  transition: 0.5s ease-in;
+  border-radius: 5px;
+
+}
+
+.carte-adds .submit:hover{
+  border-radius: 5px;
+  background-color: white;
+  color: #fe921f;
 }
 
 .carte-adds .price{
-
-  margin: 0;
-  margin-top: 22px;
-  font-size: 30px;
+  font-family: sans-serif, serif;
+  font-size: 35px;
   font-weight: 600;
   color: white;
 
 }
 
 .carte-adds .quantity{
-  margin: 0;
-  margin-top: 25px;
-  margin-right: 20px;
-
+  display: none;
 }
 
-.carte-adds .submit:hover{
-  padding: 5px;
-  font-size: 12px;
-  border-radius: 5px;
-  background-color: white;
-  color: #e7284a;
-  text-transform: uppercase;
-  transition: 0.5s;
-}
+
 
 .carte:hover{
   transform: scale(1.1);
@@ -512,10 +530,22 @@ input[type='number']{
 .carte-flex{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
+@media (max-width: 750px) {
+  .about-flex{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #menu h2{
+    font-size: 3rem;
+    line-height: 3.4rem;
+    
+  }
+}
 
 
 /*

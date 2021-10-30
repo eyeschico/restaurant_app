@@ -13,7 +13,7 @@
 
                 <div class="carte-image" style="background-image: url('/foodimage/{{$data->image}}');" ></div>
                 <div class="carte-text" height="20">
-                  <h2>{{$data->title}}</h2>
+                  <h4>{{$data->title}}</h4>
                   <p>{{$data->description}}</p>
                 </div>
                 <div class="carte-adds">
@@ -21,7 +21,7 @@
                     <h4 class="price">{{$data->price}}€</h4>
                   </div>
                   <div class="add">
-                    <input class="quantity" type="number" name="quantity" min="1" value="0" >
+                    <input class="quantity" type="number" name="quantity" min="1" value="1">
                   </div>
                   <div class="add">
                     <input class="submit" type="submit" value="Add cart">
