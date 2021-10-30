@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top navbgadmin">
   <!-- ***** Logo Start ***** -->
   <div>
-    <a class="italotlogo" href="{{url('/')}}">ITALOT ADMINISTRATOR</a>  
+    <a class="italotlogo" href="{{url('/')}}">Boomy's ADMINISTRATOR</a>  
   </div>
 
     

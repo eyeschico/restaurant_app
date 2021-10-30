@@ -10,15 +10,12 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>ITALOT</title>
+    <title>Boomy's</title>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
-    <link rel="stylesheet" href="assets/css/owl-carousel.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
-    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/boomys.css">
 	</head>
 	
 	<body>
@@ -34,12 +31,13 @@
     <!-- ***** Preloader End ***** -->
     
     <!-- ***** Header Area Start *****-->
-    <nav class="navbar navbar-expand-lg navbar-light navbg">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbg">
       <!-- ***** Logo Start ***** -->
       <div>
-        <a class="italotlogo" href="{{url('/')}}">ITALOT</a>  
+        <a class="italotlogo" href="{{url('/')}}">Boomy's</a>  
       </div>
 
+        
       <!-- ***** Logo End ***** -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -51,16 +49,16 @@
             <a class="nav-link " href="{{url('/')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="{{url('/#about')}}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#menu">Menu</a>
+            <a class="nav-link" href="{{url('/#menu')}}">Menus</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#chefs">Chefs</a>
+            <a class="nav-link" href="{{url('/#chefs')}}">Chefs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#reservation">Reservation</a>
+            <a class="nav-link" href="{{url('/#reservation')}}">Reservation</a>
           </li>
           </ul>
             @if (Route::has('login'))
@@ -97,7 +95,7 @@
 
                 @else
 
-                <li class="nav-item">
+                <li class="nav-item navlogin">
                   <li><a href="{{ route('login') }}" class="nav-link">Log in</a></li>
                   @if (Route::has('register'))
                     <li><a href="{{ route('register') }}" class="nav-link">Register</a></li>
@@ -110,7 +108,9 @@
     </nav>
     <!-- ***** Header Area End ***** -->
 
-    <div id="top">
+    <div id="delivery">
+
+    <h2>Your order</h2>
     <table>
       <thead>
         <tr>
@@ -134,31 +134,31 @@
 
       </tbody>
     </table>
-    
+    <div class="main-delivery">
+          <button class="btn-delivery" type="button" id="order">Order Now</button>
 
-          <div align="center" style="padding: 10px;">
-            <button class="btn btn-primary" type="button" id="order">Order Now</button>
-          </div>
-
-          <div id="appear" align="center" style="padding: 10px; display: none;">
-            <div style="padding: 10px;">
-              <label for="">Name</label>
+          <div id="appear">
+            <div class="info">
+              <label>Name</label>
               <input type="text" name="name" placeholder="Name">
             </div>
-            <div style="padding: 10px;">
-              <label for="">Phone</label>
+            <div class="info">
+              <label>Phone</label>
               <input type="number" name="phone" placeholder="phone">
             </div>
-            <div style="padding: 10px;">
-              <label for="">Adress</label>
+            <div class="info">
+              <label>Adress</label>
               <input type="text" name="address" placeholder="Adress">
             </div>
-            <div style="padding: 10px;">
+            <div class="btn-delivery-2">
               <input class="btn btn-success" type="submit" value="Order Confirm" >
               <button id="close" type="button" class="btn btn-danger">Close</button>
             </div>
 
           </div>
+    </div>
+    
+
         </form>
     </div>
 
