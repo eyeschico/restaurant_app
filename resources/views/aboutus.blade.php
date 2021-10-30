@@ -1,23 +1,62 @@
 <section class="section" id="about">
-
     <div class="container">
 
-      <div class="">
-        <div class="">
-          <h6>About Us</h6>
-          <h2>We Leave A Delicious Memory For You</h2>
+      <h6>About Us</h6>
+      <h2>We Leave A Delicious Memory For You</h2>
+      <div class="about-flex">
+        <div class="about-left">
+          <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, culpa? Alias, consectetur quae soluta esse praesentium fuga dolorem aspernatur! Quis suscipit officiis eos magnam minus sapiente tempore sunt, dolore unde.
+          </p>   
+        </div>          
+        <div class="about-right">
+
+          <div class="parent">
+            <div class="child bg-one">
+              <a href="#">bg-one</a>
+            </div>
+          </div>
+
         </div>
-        <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, culpa? Alias, consectetur quae soluta esse praesentium fuga dolorem aspernatur! Quis suscipit officiis eos magnam minus sapiente tempore sunt, dolore unde.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quis asperiores corporis necessitatibus quas id cum minus a porro, molestiae perferendis quibusdam voluptates? Esse rerum distinctio natus fugiat a commodi.
-        </p>
       </div>
 
-      <div class="">
-        <input type="checkbox" id="btnControl"/>
-        <label class="btn" for="btnControl"><img id="scooter" src="assets/images/scooter-svgrepo-com.svg" alt="italot restaurant like"></label>
+
+      <div class="about-flex">
+        <div class="about-right">
+          <div class="parent">
+            <div class="child bg-two">
+              <a href="#">bg-one</a>
+            </div>
+          </div>
+        </div>
+        <div class="about-left">
+          <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, culpa? Alias, consectetur quae soluta esse praesentium fuga dolorem aspernatur! Quis suscipit officiis eos magnam minus sapiente tempore sunt, dolore unde.
+          </p>   
+        </div>          
       </div>
 
-    </div>
+      <div class="about-flex">
+        <div class="about-left">
+          <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, culpa? Alias, consectetur quae soluta esse praesentium fuga dolorem aspernatur! Quis suscipit officiis eos magnam minus sapiente tempore sunt, dolore unde.
+          </p>   
+        </div>          
+        <div class="about-right">
+          <div class="parent">
+            <div class="child bg-three">
+              <a href="#">bg-one</a>
+            </div>
+          </div>
+        </div>
 
+      </div>
+
+      <div  align="center" class="main-scooter">
+        <div class="scooter">
+          <input type="checkbox" id="btnControl"/>
+          <label class="btn" for="btnControl"><img id="scooter" src="assets/images/scooter-svgrepo-com.svg" alt="italot restaurant like"></label>
+        </div>        
+      </div>
+  
 </section>
