@@ -234,13 +234,14 @@ about
   border-radius: 5px;
   width: 530px;
   height: 530px;
+  margin: 30px;
 }
 
 
 .about-left p{
   color: white;
   font-weight: bold;
-  font-size: 2.3rem;
+  font-size: 2rem;
   line-height: 2.6rem;
 }
 
@@ -256,6 +257,7 @@ about
   display: inline-block;
   cursor: default;
   border-radius: 5px;
+  margin: 30px;
 }
 
 .child {
@@ -298,14 +300,46 @@ about
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 40px;
 }
 
 
-
+@media (max-width: 1200px) {
+  .about-flex{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
 @media (max-width: 992px) {
-  
+  .about-flex{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 750px) {
+  .about-flex{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 630px) {
+  .about-left{  
+
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+  }
+  .about-left p{
+
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+
+  .parent {
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+  }
 }
 
 
