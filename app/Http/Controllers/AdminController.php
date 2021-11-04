@@ -137,7 +137,8 @@ class AdminController extends Controller
     $data->message=$request->message;
     $data->save();
 
-    return $request->session()->flash('status', 'Task was successful!');
+    return redirect()->back()->session()->flash('status', 'Task was successful!');
+    
   }
 
   public function viewreservation(){
