@@ -66,7 +66,7 @@
                 </div>   
               </div>
               <div class="col-md-6 col-sm-12">
-                <input type="time" name="time">
+                <input type="time" name="time" required>
               </div>
               <div class="col-lg-12">
                 <fieldset>
