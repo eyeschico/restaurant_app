@@ -54,10 +54,10 @@ class HomeController extends Controller
       $cart->quantity=$quantity;
       $cart->save();
 
-      return redirect()->back();
+      return redirect()->back()->with('success','This menu has been added to your cart');
     }
     else{
-      return redirect('/register');
+      return redirect()->back()->with('warning','You must be logged in to order a menu');
     }
   }
 
