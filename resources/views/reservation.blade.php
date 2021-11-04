@@ -58,7 +58,7 @@
               <div class="col-lg-6">
                 <div id="filterDate2">    
                   <div class="input-group date" data-date-format="dd/mm/yyyy">
-                  <input  name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy" required>
+                  <input  name="date" id="date" type="text" placeholder="dd/mm/yyyy" required>
                   <div class="input-group-addon" >
                     <span class="glyphicon glyphicon-th"></span>
                   </div>
