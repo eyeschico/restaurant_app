@@ -137,7 +137,7 @@ class AdminController extends Controller
     $data->message=$request->message;
     $data->save();
 
-    return redirect()->back()->with('success','Item created successfully!');
+    return redirect()->back()->with('success','Your reservation has been validated');
   }
 
   public function viewreservation(){

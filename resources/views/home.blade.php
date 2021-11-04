@@ -1,5 +1,8 @@
 @include('homehead')
 
+<!-- ***** Flash Message ***** -->
+@include('flash-message')
+
 <body>
 
   <!-- ***** Preloader Start ***** -->
@@ -14,9 +17,6 @@
 
   <!-- ***** Nav ***** -->
   @include('homenav')
-
-    <!-- ***** Flash Message ***** -->
-  @include('flash-message')
 
   <!-- ***** Main Banner ***** -->
   @include('mainbanner')
