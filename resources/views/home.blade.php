@@ -15,6 +15,9 @@
   <!-- ***** Nav ***** -->
   @include('homenav')
 
+    <!-- ***** Flash Message ***** -->
+  @include('flash-message')
+
   <!-- ***** Main Banner ***** -->
   @include('mainbanner')
 
