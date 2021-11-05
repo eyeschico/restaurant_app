@@ -111,6 +111,9 @@
     <div id="delivery">
 
     <h2>Your order</h2>
+
+    @include('flash-message')
+    
     <table>
       <thead>
         <tr>
@@ -144,7 +147,7 @@
               </div>
               <div class="info">
                 <label>Phone</label>
-                <input type="tel" name="phone" placeholder="phone">
+                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Phone">
               </div>
               <div class="info">
                 <label>Adress</label>
