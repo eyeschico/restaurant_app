@@ -110,6 +110,9 @@
 
 
     <div id="delivery">
+      <div class="container">
+        @include('flash-message')
+      </div>
 
 
 
@@ -165,9 +168,7 @@
       </form>
 
 
-      <div class="container">
-        @include('flash-message')
-      </div>
+
     </div>
 
 
