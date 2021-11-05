@@ -112,7 +112,9 @@
 
     <h2>Your order</h2>
 
-    @include('flash-message')
+    <div class="container">
+      @include('flash-message')
+    </div>
 
     <table>
       <thead>
