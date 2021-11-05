@@ -147,7 +147,7 @@
               </div>
               <div class="info">
                 <label>Phone</label>
-                <input type="tel" name="phone" pattern="[0-9]" required placeholder="Phone">
+                <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="Phone" required>
               </div>
               <div class="info">
                 <label>Adress</label>
