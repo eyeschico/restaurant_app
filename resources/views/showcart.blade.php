@@ -151,21 +151,12 @@
                 <input type="text" name="address" placeholder="Adress">
               </div>
               <div class="btn-delivery-2">
-                <input class="btn btn-success" type="submit" id="btnControl" value="Order Confirm" >
+                <input class="btn btn-success" type="submit" value="Order Confirm" >
                 <button id="close" type="button" class="btn btn-danger">Close</button>
               </div>
             </div>
         </div>
       </form>
-
-
-
-        <div  align="center" class="main-scooter">
-          <div class="scooter">
-            <input type="checkbox" id="btnControl"/>
-            <label class="btn" for="btnControl"><img id="scooter" src="assets/images/scooter-svgrepo-com.svg" alt="italot restaurant like"></label>
-          </div>        
-        </div>
     </div>
 
 
