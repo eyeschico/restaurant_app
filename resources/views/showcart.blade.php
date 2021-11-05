@@ -144,7 +144,7 @@
               </div>
               <div class="info">
                 <label>Phone</label>
-                <input type="text" name="phone" placeholder="phone">
+                <input type="tel" name="phone" placeholder="phone">
               </div>
               <div class="info">
                 <label>Adress</label>
