@@ -108,13 +108,14 @@
     </nav>
     <!-- ***** Header Area End ***** -->
 
+
     <div id="delivery">
+
+
 
     <h2>Your order</h2>
 
-    <div class="container">
-      @include('flash-message')
-    </div>
+
 
     <table>
       <thead>
@@ -162,6 +163,11 @@
             </div>
         </div>
       </form>
+
+
+      <div class="container">
+        @include('flash-message')
+      </div>
     </div>
 
 
