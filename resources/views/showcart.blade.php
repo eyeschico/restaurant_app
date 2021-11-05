@@ -122,44 +122,50 @@
       </thead>
       <tbody>
       <form action="{{url('orderconfirm')}}" method="post">
-      @csrf
-        @foreach($data as $data)
-        <tr>
-          <td data-label="Food Name"><input type="text" name="foodname[]" value="{{$data->title}}" hidden>{{$data->title}}</td>
-          <td data-label="Price"><input type="text" name="price[]" value="{{$data->price}}" hidden>{{$data->price}}€</td>
-          <td data-label="Quantity"><input type="text" name="quantity[]" value="{{$data->quantity}}" hidden>{{$data->quantity}}</td>
-          <td data-label="Delete"><a href="{{url('/remove', $data->id)}}">Remove</a></td>
-        </tr>
-        @endforeach
+          @csrf
+            @foreach($data as $data)
+            <tr>
+              <td data-label="Food Name"><input type="text" name="foodname[]" value="{{$data->title}}" hidden>{{$data->title}}</td>
+              <td data-label="Price"><input type="text" name="price[]" value="{{$data->price}}" hidden>{{$data->price}}€</td>
+              <td data-label="Quantity"><input type="text" name="quantity[]" value="{{$data->quantity}}" hidden>{{$data->quantity}}</td>
+              <td data-label="Delete"><a href="{{url('/remove', $data->id)}}">Remove</a></td>
+            </tr>
+            @endforeach
 
-      </tbody>
-    </table>
-    <div class="main-delivery">
+          </tbody>
+        </table>
+        <div class="main-delivery">
           <button class="btn-delivery" type="button" id="order">Order Now</button>
 
-          <div id="appear">
-            <div class="info">
-              <label>Name</label>
-              <input type="text" name="name" placeholder="Name">
+            <div id="appear">
+              <div class="info">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Name">
+              </div>
+              <div class="info">
+                <label>Phone</label>
+                <input type="text" name="phone" placeholder="phone">
+              </div>
+              <div class="info">
+                <label>Adress</label>
+                <input type="text" name="address" placeholder="Adress">
+              </div>
+              <div class="btn-delivery-2">
+                <input class="btn btn-success" type="submit" id="btnControl" value="Order Confirm" >
+                <button id="close" type="button" class="btn btn-danger">Close</button>
+              </div>
             </div>
-            <div class="info">
-              <label>Phone</label>
-              <input type="number" name="phone" placeholder="phone">
-            </div>
-            <div class="info">
-              <label>Adress</label>
-              <input type="text" name="address" placeholder="Adress">
-            </div>
-            <div class="btn-delivery-2">
-              <input class="btn btn-success" type="submit" value="Order Confirm" >
-              <button id="close" type="button" class="btn btn-danger">Close</button>
-            </div>
+        </div>
+      </form>
 
-          </div>
-    </div>
-    
 
-        </form>
+
+        <div  align="center" class="main-scooter">
+          <div class="scooter">
+            <input type="checkbox" id="btnControl"/>
+            <label class="btn" for="btnControl"><img id="scooter" src="assets/images/scooter-svgrepo-com.svg" alt="italot restaurant like"></label>
+          </div>        
+        </div>
     </div>
 
 
