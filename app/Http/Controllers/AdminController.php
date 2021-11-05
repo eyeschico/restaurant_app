@@ -11,12 +11,7 @@ use App\Models\Chef;
 use App\Models\Order;
 
 class AdminController extends Controller
-{
-  public function __construct()
-  {
-      $this->middleware('auth');
-  }
-  
+{  
   public function user(){
     $usertype= Auth::user()->usertype;
 
@@ -128,10 +123,6 @@ class AdminController extends Controller
   public function reservation(Request $request){
     $data = new reservation;
 
-    if(redirect('/login')){
-      return redirect()->back()->with('warning','You must be logged in to make a reservation')->with('info','In the navbar, you can log in "Log in" link');
-    }
-    else{
       $data->name=$request->name;
       $data->email=$request->email;
       $data->phone=$request->phone;
@@ -142,7 +133,6 @@ class AdminController extends Controller
       $data->save();
 
       return redirect()->back()->with('success','Your reservation has been validated');
-    };
   }
 
   public function viewreservation(){

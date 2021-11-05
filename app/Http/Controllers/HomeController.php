@@ -57,7 +57,7 @@ class HomeController extends Controller
       return redirect()->back()->with('success','This menu has been added to your cart');
     }
     else{
-      return redirect()->back()->with('warning','You must be logged in to order a menu');
+      return redirect()->back()->with('warning','You must be logged in to order a menu')->with('info','In the navbar, you can log in "Log in" link');
     }
   }
 
