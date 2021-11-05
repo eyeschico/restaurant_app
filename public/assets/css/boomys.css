@@ -1247,7 +1247,7 @@ only screen and (max-width: 760px),
   font-weight: bolder;
   text-align: center;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
   background: -webkit-linear-gradient(#fe921f, #fd5c3d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
