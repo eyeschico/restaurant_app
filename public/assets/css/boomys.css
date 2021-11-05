@@ -168,7 +168,7 @@ html {
 #top{  
   padding-top: 5rem;
   padding-bottom: 5rem;
-  height: auto;
+  height: 100vh;
   background-color: #000000;
   opacity: 1;
   background-image:  linear-gradient(135deg, #0c0c0c 25%, transparent 25%), linear-gradient(225deg, #0c0c0c 25%, transparent 25%), linear-gradient(45deg, #0c0c0c 25%, transparent 25%), linear-gradient(315deg, #0c0c0c 25%, #000000 25%);
@@ -225,7 +225,7 @@ html {
 }
 
 .banner{
-  margin-top: 5%;
+  margin-top: 8%;
   display: flex;
   flex-direction: row;
   align-items: center;

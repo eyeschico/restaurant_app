@@ -18,9 +18,6 @@
   <!-- ***** Main Banner ***** -->
   @include('mainbanner')
 
-  <!-- ***** Flash Message ***** -->
-  @include('flash-message')
-
   <!-- ***** About ***** -->
   @include('aboutus')
 

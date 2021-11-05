@@ -49,21 +49,21 @@
               </div>
               <div class="col-lg-6 col-sm-12">
                 <fieldset>
-                <input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
+                <input name="phone" type="text" id="phone" placeholder="Phone Number*" required>
                 </fieldset>
               </div>
               <div class="col-md-6 col-sm-12">
                 <input type="number" name="guest" placeholder="Number of guest" required>
               </div>
               <div class="col-lg-6">  
-              <input type="date" id="date" name="date" value="DD/MM/YYYY">
+              <input type="date" id="date" name="date" value="DD/MM/YYYY" placeholder="Date">
               </div>
               <div class="col-md-6 col-sm-12">
-                <input type="time" name="time" required>
+                <input type="time" name="time" required placeholder="Hour">
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                <textarea name="message" rows="6" id="message" placeholder="Message" required=></textarea>
                 </fieldset>
               </div>
               <div class="col-lg-12">

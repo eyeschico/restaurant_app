@@ -1,7 +1,8 @@
 <div id="top">
   <div class="container">
+      <!-- ***** Flash Message ***** -->
+      @include('flash-message')
     <div class="banner">
-
       <div class="left">
         <div class="title">
           <p>too fast,</p>
