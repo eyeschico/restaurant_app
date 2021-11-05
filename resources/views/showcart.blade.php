@@ -111,20 +111,20 @@
     <div id="delivery">
 
     <h2>Your order</h2>
-    <table class="table">
+    <table>
       <thead>
         <tr>
-          <th scope="col">Food Name</th>
-          <th scope="col">Price</th>
-          <th scope="col">Quantity</th>
-          <th scope="col">Action</th>
+          <th>Food Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
       <form action="{{url('orderconfirm')}}" method="post">
       @csrf
         @foreach($data as $data)
-        <tr scope="row">
+        <tr>
           <td data-label="Food Name"><input type="text" name="foodname[]" value="{{$data->title}}" hidden>{{$data->title}}</td>
           <td data-label="Price"><input type="text" name="price[]" value="{{$data->price}}" hidden>{{$data->price}}€</td>
           <td data-label="Quantity"><input type="text" name="quantity[]" value="{{$data->quantity}}" hidden>{{$data->quantity}}</td>
