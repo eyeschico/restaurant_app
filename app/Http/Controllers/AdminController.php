@@ -126,18 +126,26 @@ class AdminController extends Controller
   }
 
   public function reservation(Request $request){
-    $data = new reservation;
 
-    $data->name=$request->name;
-    $data->email=$request->email;
-    $data->phone=$request->phone;
-    $data->guest=$request->guest;
-    $data->date=$request->date;
-    $data->time=$request->time;
-    $data->message=$request->message;
-    $data->save();
 
-    return redirect()->back()->with('success','Your reservation has been validated');
+    if(Auth::id()){
+      $data = new reservation;
+
+      $data->name=$request->name;
+      $data->email=$request->email;
+      $data->phone=$request->phone;
+      $data->guest=$request->guest;
+      $data->date=$request->date;
+      $data->time=$request->time;
+      $data->message=$request->message;
+      $data->save();
+
+      return redirect()->back()->with('success','Your reservation has been validated');
+    }
+    else{
+      return redirect()->back()->with('warning','You must be logged in to make a reservation');
+    }
+
   }
 
   public function viewreservation(){
